@@ -83,3 +83,22 @@ Run the application and tests:
 
 - Educational final project focused on AI plus architectural discipline.
 - External provider integration tests may require active credentials.
+
+---
+
+### 💡 Ideias de Evolução do Projeto (Próximos Passos)
+
+Com base na arquitetura construída (Spring AI + Tool Calling), o projeto foi estruturado de forma extensível para permitir as seguintes evoluções:
+
+1. **Validações de Negócio antes do Tool Calling**:
+  * Adicionar regras de validação nos *Use Cases* para impedir a criação de transações com valores negativos ou descrições vazias antes de acionar a camada de persistência.
+
+2. **Novas Ferramentas de Consulta (Tool Calling)**:
+  * Criar uma nova ferramenta `GetMonthlyExpenseSummaryUseCase` para permitir que a IA responda a perguntas complexas em linguagem natural, como: *"Quanto gastei no total este mês?"* ou *"Qual foi a minha maior despesa?"*.
+
+3. **Melhoria dos Prompts do Sistema**:
+  * Refinar o ficheiro `system-message.st` para instruir a IA a formatar respostas com categorização automática avançada (ex: Alimentação, Transporte, Lazer) e dar dicas de economia ao utilizador.
+
+4. **Documentação e Testes**:
+  * Implementação do **Springdoc OpenAPI (Swagger UI)** para documentar e permitir o teste interativo de todos os endpoints REST diretamente pelo navegador.
+  * Expansão da cobertura de testes unitários e de integração para os fluxos do `TransactionController`.
